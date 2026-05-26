@@ -1,0 +1,43 @@
+name: Retrain Model
+
+on:
+
+  push:
+
+    branches:
+      - main
+
+jobs:
+
+  train:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - uses: actions/checkout@v4
+
+
+      - uses: actions/setup-python@v5
+
+        with:
+          python-version: "3.12"
+
+
+      - name: Install
+
+        run: |
+
+          pip install mlflow
+          pip install pandas
+          pip install scikit-learn
+          pip install xgboost
+
+
+      - name: Run MLProject
+
+        run: |
+
+          cd MLProject
+
+          mlflow run .
