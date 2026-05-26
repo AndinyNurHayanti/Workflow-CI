@@ -1,7 +1,5 @@
-python: "3.12"
-
 build_dependencies:
-  pip: "25.0"
+  - pip==25.0
 
 dependencies:
   - pandas
