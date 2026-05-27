@@ -1,7 +1,7 @@
-name: Diabetes_Model
+name: Diabetes_XGBoost
+
+conda_env: conda.yaml
 
 entry_points:
-
   main:
-
     command: "python modelling.py"

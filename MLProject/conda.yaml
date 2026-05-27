@@ -1,8 +1,10 @@
-build_dependencies:
-  - pip==25.0
+name: diabetes-env
 
 dependencies:
-  - pandas
-  - scikit-learn
-  - mlflow
-  - xgboost
+  - python=3.11
+  - pip
+  - pip:
+      - mlflow
+      - xgboost
+      - pandas
+      - scikit-learn
